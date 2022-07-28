@@ -1,0 +1,459 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+div svg path {
+    color: #54656f;
+}
+
+.conWidth100 {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.w40r50 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.w50r50 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.img100 {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.dp50 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background: #d1d7db;
+    overflow: hidden;
+}
+
+.mainNav {
+    height: 127px;
+    position: absolute;
+    z-index: 0;
+    background: #00A884;
+}
+
+.wpWeb {
+    max-width: 1600px;
+    height: 100vh;
+    display: flex;
+    z-index: 1;
+    margin: 0 auto;
+    box-shadow: 0 6px 18px rgba(11, 20, 26, 0.5);
+    background: #fff;
+}
+
+/* SIDE NAV */
+.sideNav {
+    width: 30%;
+    min-width: 310px;
+    max-width: 480px;
+    display: flex;
+    position: relative;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+/* SIDE HEADER */
+.sideNav-header {
+    height: 60px;
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f2f5;
+
+}
+
+.sideNav-profile {
+    width: 50%;
+    background: #f0f2f5;
+}
+
+.profile-img {
+    display: flex;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.sideNav-choice {
+    display: flex;
+    justify-content: end;
+    width: 50%;
+    background: #f0f2f5;
+}
+
+.iconDiv {
+    width: 40px;
+    display: flex;
+    background: #f0f2f5;
+}
+
+/* SIDE SEARCH */
+.sideNav-search {
+    height: 50px;
+    background: #fff;
+}
+
+.search {
+    width: 93%;
+    border-radius: 8px;
+    background: #f0f2f5;
+}
+
+.search-text {
+    width: 84%;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    border-width: 0;
+    box-shadow: none;
+    background: #f0f2f5;
+}
+
+.search-enter {
+    width: 16%;
+    height: 35px;
+    border: none;
+    border-width: 0;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+/* SIDE PERSON */
+.sideNav-persons {
+    min-height: 100vh;
+    background: #fff;
+    border-top: 1px solid #e9edef;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.persons-con {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.person {
+    width: 100%;
+    height: 73px;
+    display: flex;
+    cursor: pointer;
+}
+
+.person.active {
+    background: #f0f2f5;
+}
+
+.person:hover {
+    background: #f0f2f580;
+}
+
+.person-profile {
+    width: 77px;
+    height: 73px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+}
+
+.person-info {
+    width: 60%;
+    height: 71px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.person-name {
+    width: 100%;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.person-text {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #3b4a54;
+}
+
+.person-time-icon {
+    width: 20%;
+    height: 71px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.person-date {
+    padding: 0px 14px 0px 0px;
+    width: 100%;
+    font-size: 12px;
+    color: #667781;
+    display: flex;
+    justify-content: end;
+}
+
+.person-icons,
+.down-but {
+    width: 100%;
+    font-size: 12px;
+    background: none;
+    border: none;
+    position: relative;
+    left: 20px;
+    opacity: 0;
+    transition: .4s;
+}
+
+.person:hover .person-icons,
+.person:hover .down-but {
+    opacity: 1;
+    left: 10px;
+}
+
+
+/*=========== TALK PAGE ==========*/
+.talkPage {
+    width: 70%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    z-index: 2;
+    overflow: hidden;
+    background: #d1d7db;
+}
+
+.talkPage-in {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    left: 0;
+    z-index: 2;
+    overflow: hidden;
+    background: #efeae2;
+}
+
+/* TALK MİD */
+.talkPage-mid {
+    height: 100%;
+    display: flex;
+    background: url(wp-chat.png);
+}
+
+.mid-talk {
+
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.talk-block-my {
+
+    padding: 0 84px;
+    display: flex;
+    justify-content: end;
+
+}
+
+.talk-my {
+    border-radius: 8px;
+    background: #d9fdd3;
+    box-shadow: 0px 1px 2px rgba(11, 20, 26, .2);
+    display: flex;
+    align-items: center;
+}
+
+.talk-my-p {
+    margin: 5px 82px 5px 10px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.talk-block-person {
+    margin: 10px 0px 5px 0px;
+    padding: 0 84px;
+    display: flex;
+    justify-content: start;
+}
+
+.talk-person {
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px rgba(11, 20, 26, .2);
+    background: #fff;
+
+}
+
+.talk-person p {
+    margin: 5px 82px 5px 10px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+/* TALK HEADER */
+.talkPage-header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background: #f0f2f5;
+    border-left: 1px solid #d1d7db;
+    z-index: 1;
+}
+
+.talk-header {
+    width: 100%;
+    height: 73px;
+    display: flex;
+    background: #f0f2f5;
+    cursor: pointer;
+}
+
+.talk-time-icon {
+    width: 26%;
+    height: 71px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.talk-icons,
+.talk-but {
+    margin: 0px 0px 0px 16px;
+    width: 24px;
+    font-size: 12px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    left: 20px;
+}
+
+/* TALK NAVBOTTOM */
+.talkPage-navbottom {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: #f0f2f5;
+    border-left: 1px solid #d1d7db;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.navbottom-icons {
+    width: 94px;
+    height: 62px;
+    margin: 0px 0px 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbottom-message {
+    width: 100%;
+    border-radius: 8px;
+
+}
+
+.talk-text {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+.dpNone {
+    display: none;
+}
+
+.resMenu {
+    position: absolute;
+    top: 15%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(11, 20, 26, .2);
+    z-index: 1000;
+    display: none;
+}
+
+
+@media screen and (max-width:940px) {
+    .talk-block-person {padding: 0 4px;}
+    .talk-block-my {padding: 0 4px;}
+}
+
+@media screen and (max-width:698px) {
+    /*.talk-block-person {padding: 0 4px;}
+    .talk-block-my {padding: 0 4px;}*/
+    .sideNav{
+        position: absolute;
+        z-index: 10;
+        display: none;
+    }
+    .talkPage {
+        width: 100%;
+    }
+    .resMenu {display: block;}
+    
+}
